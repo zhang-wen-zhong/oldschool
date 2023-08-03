@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>JEFFERY OLD SCHOOL</title>
+    <style>
+        /* *{
+            outline: 1px solid blue;
+        } */
+        
+        .brush_caption{
+            font-size: 30px;
+            padding: 100px 0 0;
+            font-weight: bolder;
+            text-align: center;
+            color: transparent;
+            background-image: linear-gradient(to right, black, gray, white);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: text-expand 5s ease-in-out infinite;
+        } /*  標題動畫 */
+        @keyframes text-expand {
+            0% {
+                background-size: 0% 100%;
+            }
+            50% {
+                background-size: 100% 100%;
+            }
+            100% {
+                background-size: 0% 100%;
+            }
+        }
+        @media screen and (min-width: 768px ){
+            .brush_caption{
+                text-align: center;
+                font-size: 60px;
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .brush_caption{
+                font-size: 70px;
+            }
+        }
+        .banner_annotation,
+        .outfit_caption{
+            display: none;
+        }
+        .outfit_banner img{
+            width: 100%;
+        }   
+        .curtain_pic{
+            --image_first: url(theoneoff-material/case/a1.png);
+            --image_second: url(theoneoff-material/case/a3.png);
+            --height: 200px;
+            width: 100%;
+            height: var(--height);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+            border-radius: 4px;
+            margin-bottom: 5%;
+            box-sizing: border-box;
+        }
+        .curtain_pic::before,
+        .curtain_pic::after {
+            content: '';
+            display: block;
+            width: inherit;
+            height: inherit;
+            background-image: var(--image_first);
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .img_second::before,
+        .img_second::after {
+            background-image: var(--image_second);
+        }
+        .curtain_pic::before{
+            filter: grayscale(100%);
+        }
+        .img_second::before{
+            filter: blur(2px);
+        }
+        .curtain_pic::after{
+            clip-path: inset(0 0 0 calc(var(--slide) / 10 * 1%));
+        }
+        .slider{
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-appearance: none;
+            appearance: none;
+            outline: none;
+            margin: 0;
+            background: transparent;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+        .slider::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            appearance: none;
+            width: 4px;
+            height: var(--height);
+            background: #000;
+            box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+            border-radius: 2px;
+            cursor: ew-resize;
+        }
+        .question p{
+            font-size: 12px;
+            text-align: center;
+        }
+        @media screen and (min-width: 768px ){
+            
+            .banner_annotation{
+                padding: 100px 0 20px 220px;
+                display: flex;
+                width: 100%;
+            }
+            .annotation_text{
+                width: 50%;
+                display: block;
+                font-size: 12px;
+            }
+            .annotation_location{
+                width: 50%;
+                display: block;
+                font-size: 12px;
+                padding: 0 2%;
+            }
+            .outfit_caption{
+                display: block;
+                transform: rotate(-90deg);
+                font-size: 88px;
+                text-align: center;
+                line-height: 4;
+            }
+            .outfit_banner {
+                height: 50vh;
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url(theoneoff-material/top/z4.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                border-top: 1px solid #ccc;
+            }
+            .outfit_banner_img {
+                height: 77%;
+                width: 60%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                border: 1px solid rgba(255, 255, 255, .3);
+                border-radius: 10px;
+                font-size: 30px;
+                padding: 20px;
+            }
+            .backdrop-invert {
+                transition: 1s all;
+            }
+            .backdrop-invert:hover {
+                backdrop-filter: invert(80%);
+            }
+            .outfit_banner img {
+                display: none;
+            }
+            .curtain{
+                display: flex;
+            }
+            .curtain_pic{
+                --height: 300px;
+            }
+            
+        }
+        @media screen and (min-width: 1200px ){
+            
+            .annotation_text,.annotation_location{
+                font-size: 22px;
+            }
+            .curtain_pic{
+                --height: 400px;
+            }
+            .question p{
+            font-size: 26px;
+
+        }
+        }
+        .outfit{
+            display: flex;
+            width: 100%;
+            padding: 5% 0;
+        }
+        .outfit_caption{
+            width: 20%;
+        }
+        
+        @media screen and (min-width: 768px ){
+            .curtain{
+            display: flex;
+            }
+
+        }
+        @media screen and (min-width: 1200px ){
+            .outfit{
+                padding: 0;
+                /* outline: 1px solid blue; */
+            }
+            
+        }
+
+        .container{
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-auto-rows: 1fr;
+            
+
+        }
+        
+        .item img {
+            height: 101%;
+            width: 101%;
+
+        }
+        .i1{
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        .i2{
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+        .i3{
+            grid-row: 1/2;
+            grid-column: 3/5;
+        }
+        .i5{
+            grid-row: 2/3;
+            grid-column: 1/3;
+        }
+        .i12{
+            grid-row: 3/4;
+            grid-column: 4/6;
+        }
+        .i14{
+            grid-row: 4/5;
+            grid-column: 2/4;
+        }
+        .i17{
+            grid-row: 5/6;
+            grid-column: 1/3;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu_switch">
+    <header class="main_header">  
+        <div class="logo">
+            <a href="index.html"><img src="theoneoff-material\top\LOGO.png" alt=""></a>
+        </div>
+        <label for="menu_switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <nav class="main_nav" >
+            <a href="about.html" >ABOUT</a>
+            <a href="introduce.html">INTRODUCE</a>
+            <a href="case.html">CASES</a>
+            <a href="outfit.html">OUTFIT</a>
+            <a href="reserve.html">RESERVE</a>
+        </nav> 
+    </header>
+        <section class="canvas">
+            <p class="brush_caption">Outfit</p>
+            <div class="banner_annotation">
+                <p class="annotation_text">LADES<br>7 +<sup>(dress)</sup></p>
+                <p class="annotation_location">MEN<br>6 +<sup>(dress)</sup></p>
+            </div>
+            <section class="outfit">
+                <div class="outfit_caption">
+                    <p>classic</p>
+                </div>
+                <div class="outfit_banner">
+                    <div class="outfit_banner_img backdrop-invert"><img src="theoneoff-material/top/z4.png" alt=""></div>
+                </div>
+            </section>
+            <section class="question">
+                <p class="">which effect do you like?</p>
+            </section>
+            <section class="curtain"> 
+                <div class="curtain_pic" style="--slide: 500">
+                    <input type="range" class="slider" min="1"
+                     max="1000" value="500" oninput="this.parentNode.style.setProperty('--slide', `${this.value}`)">
+                </div>
+                <div class="curtain_pic img_second" style="--slide: 500">
+                    <input type="range" class="slider" min="1"
+                     max="1000" value="500" oninput="this.parentNode.style.setProperty('--slide', `${this.value}`)">
+                </div> 
+            </section>
+            <section class="question">
+                <p class="">blur or grayscale? both?<br>follow your heart!</p>
+            </section>             
+            <section class="container">
+                <div class="item i1"><img src="theoneoff-material\top\z5.png" alt=""></div>
+                <div class="item i2"><img src="theoneoff-material\top\c1.png" alt=""></div>
+                <div class="item i3"><img src="theoneoff-material\outfit\x4.png" alt=""></div>
+                <div class="item i4"><img src="theoneoff-material\outfit\x13.png" alt=""></div>
+                <div class="item i5"><img src="theoneoff-material\outfit\x2.png" alt=""></div>
+                <div class="item i6"><img src="theoneoff-material\outfit\x11.png" alt=""></div>
+                <div class="item i7"><img src="theoneoff-material\outfit\x12.png" alt=""></div>
+                <div class="item i8"><img src="theoneoff-material\outfit\x18.png" alt=""></div>
+                <div class="item i9"><img src="theoneoff-material\outfit\x14.png" alt=""></div>
+                <div class="item i10"><img src="theoneoff-material\outfit\x17.png" alt=""></div>
+                <div class="item i11"><img src="theoneoff-material\outfit\x16.png" alt=""></div>
+                <div class="item i12"><img src="theoneoff-material\outfit\x8.png" alt=""></div>
+                <div class="item i13"><img src="theoneoff-material\outfit\x20.png" alt=""></div>
+                <div class="item i14"><img src="theoneoff-material\outfit\x7.png" alt=""></div>
+                <div class="item i15"><img src="theoneoff-material\outfit\x5.png" alt=""></div>
+                <div class="item i16"><img src="theoneoff-material\outfit\x19.png" alt=""></div>
+                <div class="item i17"><img src="theoneoff-material\outfit\x25.png" alt=""></div>
+                <div class="item i18"><img src="theoneoff-material\outfit\x24.png" alt=""></div>
+                <div class="item i19"><img src="theoneoff-material\outfit\x22.png" alt=""></div>
+                <div class="item i20"><img src="theoneoff-material\outfit\x9.png" alt=""></div>
+            </section>
+        </section>
+        <section class="cloth">
+            <section class="footer">
+                <div class="footer_card">
+                    <p class="footer_logo">JEDFFERY</p>
+                    <p class="footer_content">The latest fashion news, beauty coverage, celebrity style, fashion week updates, culture reviews, and videos on Vogue.com.</p>
+                </div>
+                <div class="footer_font">
+                    <div class="footer_icon">
+                        <a href="case-detail.html"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-pinterest-p fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-discord fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="footer_right">2023&copy;jeffery old school.© 2023 Condé Nast. All rights reserved. Use of this site constitutes acceptance of our User Agreement and Privacy Policy and Cookie Statement and Your California Privacy Rights. jeffery may earn a portion of sales from products that are purchased through our site as part of our Affiliate Partnerships with retailers. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast.</div> 
+            </section>
+
+    </section>
+        
+    
+
+</body>
+</html>

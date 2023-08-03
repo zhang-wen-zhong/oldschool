@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>JEFFERY OLD SCHOOL</title>
+    <style>
+        
+        .banner{
+            overflow: hidden;
+            margin: 60px auto;
+            position: relative;
+        }
+        .banner img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .banner_header{
+            font-size: 30px;
+            position: absolute;
+            top: 25%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-weight: bolder;
+            color: #4b4a4a;
+        }
+        @media screen and (min-width: 768px ){
+            .banner_header{
+                font-size: 60px;
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .banner_header{
+                font-size: 70px;
+            }
+        }
+        .introduce{
+            padding: 0 0 50px;
+        }
+        .introduce_card{
+            padding: 30px 0;
+        }
+        .introduce_pic{
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .introduce_pic img{
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        /* .introduce_text{} */
+        .introduce_text h2{
+            font-size: 20px;
+            padding: 10px 0;
+        }
+        .introduce_text p{
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        @media screen and (min-width: 768px ){
+
+            .introduce{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 0 100px;
+            }
+            .introduce_card:nth-child(2) > .introduce_pic,.introduce_card:nth-child(4) > .introduce_pic{
+                order: 2;
+            
+            }
+            .introduce_card{
+                display: flex;
+                width: 80%;
+                margin: auto;
+                align-items: center;
+            }
+            .introduce_pic{
+                width: 100%;
+            }
+            .introduce_text{
+                padding: 0 40px;
+                box-sizing: border-box;
+            }
+            
+        }
+        @media screen and (min-width: 1200px ){
+            .introduce{
+                padding: 0 0 150px;
+            }
+            .introduce_pic{
+                width: 80%;
+            }
+            .introduce_text h2{
+                font-size: 26px;
+            }
+            .introduce_text p{
+                font-size: 20px;
+            }
+        }
+
+        .article{
+            padding: 30px 0 50px;
+        }
+        .article_card_pic{
+            overflow: hidden;
+        }
+        .article_card_pic img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .article_title{
+            font-size: 20px;
+            padding: 10px 0;
+            line-height: 1.5;
+        }
+        @media screen and (min-width: 768px ){
+            .article{
+                display: flex;
+                justify-content: space-between;
+                padding: 30px 0 100px;
+            }
+            .atricle_card{
+                width: 45%;
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .article{
+                padding: 30px 0 150px;
+            }
+            .article_title{
+                font-size: 26px;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu_switch">
+    <header class="main_header">  
+        <div class="logo">
+            <a href="index.html"><img src="theoneoff-material\top\LOGO.png" alt=""></a>
+        </div>
+        <label for="menu_switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <nav class="main_nav" >
+            <a href="about.html" >ABOUT</a>
+            <a href="introduce.html">INTRODUCE</a>
+            <a href="case.html">CASES</a>
+            <a href="outfit.html">OUTFIT</a>
+            <a href="reserve.html">RESERVE</a>
+        </nav> 
+    </header>
+    <section class="banner">
+        <img src="theoneoff-material\introduce\banner1.png" alt="">
+        <p class="banner_header">Introduce</p>
+    </section>
+    <section class="canvas">
+        <section class="separate_block" >
+            <div class="separate_block_title">DESINGER</div>
+        </section> 
+        <section class="introduce">    
+                <section class="introduce_card">
+                    <div class="introduce_pic">
+                        <img src="theoneoff-material\about_us\a1.png" alt="">
+                    </div>
+                    <div class="introduce_text">
+                        <h2>YEN</h2>
+                        <p>A hairstylist is a skilled professional who possesses creativity, precision, and expertise in cutting, styling, and transforming hair. They possess an eye for detail, stay updated with the latest trends, and work diligently to create personalized looks that enhance the beauty and confidence of their clients.</p>
+                    </div>
+                </section>
+                <section class="introduce_card">
+                    <div class="introduce_pic">
+                        <img src="theoneoff-material\about_us\a2.png" alt="">
+                    </div>
+                    <div class="introduce_text">
+                        <h2>JEFFERY</h2>
+                        <p>A hairstylist is a skilled professional who possesses creativity, precision, and expertise in cutting, styling, and transforming hair. They possess an eye for detail, stay updated with the latest trends, and work diligently to create personalized looks that enhance the beauty and confidence of their clients.</p>
+                    </div>
+                </section>
+                <section class="introduce_card">
+                    <div class="introduce_pic">
+                        <img src="theoneoff-material\about_us\a3.png" alt="">
+                    </div>
+                    <div class="introduce_text">
+                        <h2>LERU</h2>
+                        <p>A hairstylist is a skilled professional who possesses creativity, precision, and expertise in cutting, styling, and transforming hair. They possess an eye for detail, stay updated with the latest trends, and work diligently to create personalized looks that enhance the beauty and confidence of their clients.</p>
+                    </div>
+                </section>
+                <section class="introduce_card">
+                    <div class="introduce_pic">
+                        <img src="theoneoff-material\about_us\a4.png" alt="">
+                    </div>
+                    <div class="introduce_text">
+                        <h2>MING</h2>
+                        <p>A hairstylist is a skilled professional who possesses creativity, precision, and expertise in cutting, styling, and transforming hair. They possess an eye for detail, stay updated with the latest trends, and work diligently to create personalized looks that enhance the beauty and confidence of their clients.</p>
+                    </div>
+                </section>
+                
+        </section>
+        <section class="separate_block" >
+            <div class="separate_block_title">ACTIVITY</div>
+        </section>  
+        <section class="article">
+                <div class="atricle_card">
+                    <div class="article_card_pic">
+                        <img src="theoneoff-material\top\z1.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="article_card_text">
+                        <h5 class="article_title"> Beauty fashion trend hair show</h5>
+                    </div>
+                </div>
+                <div class="atricle_card">
+                    <div class="article_card_pic">
+                        <img src="theoneoff-material\top\z2.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="article_card_text">
+                        <h5 class="article_title">men’s uno supermodel final</h5>
+                    </div>
+                </div>
+        </section> 
+    </section>
+    <section class="cloth">
+            <section class="footer">
+                <div class="footer_card">
+                    <p class="footer_logo">JEDFFERY</p>
+                    <p class="footer_content">The latest fashion news, beauty coverage, celebrity style, fashion week updates, culture reviews, and videos on Vogue.com.</p>
+                </div>
+                <div class="footer_font">
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-pinterest-p fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-discord fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="footer_right">2023&copy;jeffery old school.© 2023 Condé Nast. All rights reserved. Use of this site constitutes acceptance of our User Agreement and Privacy Policy and Cookie Statement and Your California Privacy Rights. jeffery may earn a portion of sales from products that are purchased through our site as part of our Affiliate Partnerships with retailers. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast.</div> 
+            </section>
+
+    </section>
+    
+</body>
+</html>

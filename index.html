@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>JEFFERY OLD SCHOOL</title>
+    <style>
+        
+        
+        .about{
+            padding: 90px 0;
+        }
+        .about_pic{
+            width: 100%;
+        }
+        .about_pic img{
+            width: 100%;
+        }      
+        .about_text_title{
+            padding: 10px 0;
+            font-size: 20px; 
+        } 
+        .about_text_content {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        @media screen and (min-width: 768px ){
+            .about{
+                display: flex;
+                justify-content: space-between;
+                width: 85%;
+                margin: 130px auto;
+                z-index: 3; 
+            }
+            .about_pic{
+                width: 43%;
+                position: relative;
+            }
+            .about_pic_main{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+            .about_pic_main img{
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .about_grey {
+                width: 100%;
+                height: 100%;
+                background-color: #ccc;
+                position: absolute;
+                top: -10%;
+                left: -10%;
+                z-index: -1; 
+            }
+            .about_text {
+                width: 43%;
+                background-color: #f34949;
+            }
+            .about_text_title{
+                font-size: 36px;
+                font-weight: bolder;
+                padding: 15% 10% 10%;
+            } 
+            .about_text_content {
+                font-size: 20px;
+                padding: 0% 10%;
+            }          
+        }
+        @media screen and (min-width: 1200px ){
+            .about_text_title{
+                font-size: 48px;
+            } 
+            .about_text_content {
+                font-size: 26px;
+            }   
+            
+        }
+        .clean_pic_first,
+        .clean_pic_second{
+            padding: 30px 0 0;
+        }
+        .clean_pic_first img{
+            width: 100%;
+        }
+        .clean_pic_second img {
+            width: 100%;
+        }
+        .clean_first_article p:first-child, 
+        .clean_second_article p:first-child {
+            font-size: 20px; 
+            padding: 10px 0;
+        }
+        .clean_first_article p,.clean_second_article p{
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        @media screen and (min-width: 768px ){
+            .clean{
+                margin: 20% auto;
+                width: 70%;
+                background-color: black;
+                position: relative;
+            }
+            .clean_first_article p:first-child {
+                font-size: 36px;
+                font-weight: bolder;
+                padding: 13% 5% 0;
+                color: white; 
+            }
+            .clean_first_article p{
+                width: 70%;
+                line-height: 1.5;
+                font-size: 20px;
+                padding: 0 5% 5%;
+                color: white; 
+            }
+            .clean_pic_first{
+                width: 30%;
+                overflow: hidden;
+                position: absolute;
+                right: -5%;
+                top: 20%;
+                z-index: 4;
+            }
+            .clean_pic_first img{
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .clean_pic_second{
+                width: 35%;
+                overflow: hidden;
+                position: absolute;
+                left: 10%;
+                top: -40%;
+                z-index: 4;
+            }
+            .clean_pic_second img{
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .clean_grey{
+                background-color: #ccc;
+                width: 35%;
+                padding-top:55%;
+                position: absolute;
+                right: -3%;
+                top: -15%;
+                z-index: -2;
+            }
+            .clean_red{
+                background-color: #f34949;
+                width: 65%;
+                padding-top: 5%;
+                position: absolute;
+                right: -10%;
+                bottom: -7%;
+                z-index: -4;
+            }
+            .clean_second_article{
+                display: none;
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .clean_first_article p:first-child {
+                font-size: 48px;
+            }
+            .clean_first_article p{
+                font-size: 26px;
+            }
+        }
+        .canvas_grey{
+            background-color: #eee;
+        }
+        .news{
+            width: 85vw;
+            margin: auto;
+            padding: 5% 0 10%;
+        }
+        .news_caption p{
+            font-size: 20px;
+            padding: 10px 0;
+            font-weight: bolder;
+        }
+        .news_text_date p{
+            font-size: 12px;
+            font-weight: bolder;
+            padding: 5px 0;
+        }
+        .news_text_content p{
+            font-size: 12px;
+            padding: 5px 0;
+        }
+        @media screen and (min-width: 768px ){
+            .news{
+                display: flex;
+                padding: 5% 0 ;
+            }
+            .news_caption{
+                width: 20%;
+            }
+            .news_caption p{
+                font-size: 36px;
+            }
+            .news_group{
+                width: 80%;
+                padding: 2% 0;
+            }
+            .news_group_text{
+                display: flex;
+            }
+            .news_text_date p, 
+            .news_text_content p{
+                font-size: 20px;
+                padding: 20px;
+            }
+
+        }
+        @media screen and (min-width: 1200px ){
+            .news_caption p{
+                font-size: 48px;
+            }
+            .news_text_date p, 
+            .news_text_content p{
+                font-size: 26px;
+            }
+        }
+        
+        .workcase{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .workcase_card{
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .workcase_card_pic{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .workcase_card_pic img{
+            display: block;
+            width: 100%;
+            height: 100%; 
+            object-fit: cover;
+        }
+        .workcase_card_text{
+            text-align: center;
+        }
+        .workcase_card_text p{
+            font-size: 20px;
+            padding: 5%;
+        }
+        @media screen and (min-width: 1200px ){
+            .workcase_card_text p{
+                font-size: 26px;
+            }
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+        <input type="checkbox" name="" id="menu_switch">
+        <header class="main_header">  
+            <div class="logo">
+                <a href="index.html"><img src="theoneoff-material\top\LOGO.png" alt=""></a>
+            </div>
+            <label for="menu_switch" class="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="main_nav" >
+                <a href="about.html" >ABOUT</a>
+                <a href="introduce.html">INTRODUCE</a>
+                <a href="case.html">CASES</a>
+                <a href="outfit.html">OUTFIT</a>
+                <a href="reserve.html">RESERVE</a>
+            </nav> 
+        </header>
+         <section class="canvas">  
+            <section class="about">
+                    <div class="about_pic">
+                        <div class="about_pic_main">
+                            <img src="theoneoff-material\top\story2.png">
+                        </div>
+                        <div class="about_grey"></div>
+                    </div>
+                    <div class="about_text">
+                        <div class="about_text_title"><p>HAIRSTYLE</p></div>
+                        <div class="about_text_content"><p>Stylish and versatile hair artist.Transforming hair with creativity and precision, delivering personalized styles that inspire confidence.</p></div>
+                    </div>          
+            </section>
+            <section class="clean">
+                    <div class="clean_pic_first">
+                        <img src="theoneoff-material\top\story7.png" alt="">
+                    </div>
+                    <div class="clean_first_article">
+                        <p>CLEAN FIT</p>
+                        <p>Clean Fit Style, as the name suggests, is a fashion style characterized by cleanliness and well-fitted outfits.</p>
+                    </div>
+                    <div class="clean_pic_second">
+                        <img src="theoneoff-material\top\story9.png" alt="">
+                    </div>
+                    <div class="clean_second_article">
+                    <p>CASUAL</p>
+                    <p>I love casual wear because it's comfortable and you can express yourself!</p>
+                    </div>
+                    <div class="clean_grey"></div>
+                    <div class="clean_red"></div>
+            </section>
+        </section>
+        <section class="canvas_grey">
+            <div class="news">
+                <div class="news_caption">
+                    <p>NEWS</p>
+                </div>
+                <div class="news_group">
+                    <div class="news_group_text">
+                        <div class="news_text_date"><p>2023-05-20</p></div>
+                        <div class="news_text_content"><p>Tresses Unleashed: A Masterpiece of Hair Exhibition</p></div>
+                    </div>
+                    <div class="news_group_text">
+                        <div class="news_text_date"><p>2023-04-07</p></div>
+                        <div class="news_text_content"><p>Unleash Your Style: Hair Show Extravaganza</p></div>
+                    </div>
+                    <div class="news_group_text">
+                        <div class="news_text_date"><p>2023-03-09</p></div>
+                        <div class="news_text_content"><p>Tresses Transformed: Striking Hair Showcase</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="canvas">
+            <div class="workcase">
+                <div class="workcase_card col-6 col-md-3">
+                    <div class="workcase_card_pic">
+                        <a href="#"><img src="theoneoff-material\top\card1.png" alt=""></a>
+                    </div>
+                    <div class="workcase_card_text"><p>Dreadlocks</p></div>
+                </div>
+                <div class="workcase_card col-6 col-md-3">
+                    <div class="workcase_card_pic">
+                        <a href="#"><img src="theoneoff-material\top\story1.png" alt=""></a>
+                    </div>
+                    <div class="workcase_card_text"><p>Blonde</p></div>
+                </div>
+                <div class="workcase_card col-6 col-md-3">
+                    <div class="workcase_card_pic">
+                        <a href="#"><img src="theoneoff-material\top\d12.png" alt=""></a>
+                    </div>
+                    <div class="workcase_card_text"><p>Easy perm</p></div>
+                </div>
+                <div class="workcase_card col-6 col-md-3">
+                    <div class="workcase_card_pic">
+                        <a href="#"><img src="theoneoff-material\top\outfit2.png" alt=""></a>
+                    </div>
+                    <div class="workcase_card_text"><p>
+                        Japanese</p></div>
+                </div>
+            </div>
+        </section>
+         <section class="cloth">
+            <section class="footer">
+                <div class="footer_card">
+                    <p>JEFFERY</p>
+                    <p>he latest fashion news, beauty coverage, celebrity style, fashion week updates, culture reviews, and videos on Wovue.com.</p>
+                </div>
+                <div class="footer_font">
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-pinterest-p fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-discord fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="footer_right">2023&copy;jeffery old school.© 2023 Condé Nast. All rights reserved. Use of this site constitutes acceptance of our User Agreement and Privacy Policy and Cookie Statement and Your California Privacy Rights. jeffery may earn a portion of sales from products that are purchased through our site as part of our Affiliate Partnerships with retailers. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast.</div> 
+            </section>
+
+        </section> 
+        
+
+</body>
+</html>

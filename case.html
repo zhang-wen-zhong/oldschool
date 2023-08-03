@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>JEFFERY OLD SCHOOL</title>
+    <style>
+        /* *{
+            outline: 1px solid blue;
+        } */
+        .banner{
+            padding: 60px 0 0;
+        }
+        .banner_pic_src{
+            overflow: hidden;
+        }
+        .banner_pic img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .banner_text{
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            box-sizing: border-box;
+        }
+        .banner_text h2{
+            padding: 10px 0;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        .banner_text p{
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        @media screen and (min-width: 768px ){
+            .banner{
+                padding: 60px 0 100px;
+                display: flex;
+                width: 100%;
+            }
+            .banner_pic{
+                width: 70%;
+            }
+            .banner_text{
+                width: 30%;
+                border: none;
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .banner{
+                padding: 60px 0 150px;
+            }
+            .banner_text h2{
+                font-size: 26px;
+            }
+            .banner_text p{
+                font-size: 20px;
+            }
+        }
+        .brush_caption{
+            font-size: 30px;
+            padding: 10px;
+            font-weight: bolder;
+            text-align: center;
+            color: transparent;
+            background-image: linear-gradient(to right, black, gray, white);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: text-expand 5s ease-in-out infinite;
+        } /*  標題動畫 */
+        @keyframes text-expand {
+            0% {
+                background-size: 0% 100%;
+            }
+            50% {
+                background-size: 100% 100%;
+            }
+            100% {
+                background-size: 0% 100%;
+            }
+        }
+        @media screen and (min-width: 768px ){
+            .brush_caption{
+                text-align: center;
+                font-size: 60px;
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .brush_caption{
+                font-size: 70px;
+            }
+        }
+        .case_title{
+            padding: 5px 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .case_page{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 0 40px;
+        }
+        .case_card{
+            box-sizing: border-box;
+            width: 50%;
+            padding: 5px;
+            text-align: center;
+        }
+        .case_img img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .case_text{
+            padding: 5px;
+            font-size: 12px;
+        }
+        @media screen and (min-width: 768px ){
+            .case_title{
+                padding: 5px 10px;
+                font-size: 20px;
+            }
+            
+            .case_card{
+                width: 25%;
+                padding: 0 10px;
+            }
+            .case_text{
+                padding: 5px;
+                font-size: 20px;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            .case_title{
+                padding: 5px 10px;
+                font-size: 30px;
+            }
+            .case_text{
+                padding: 5px;
+                font-size: 26px;
+            }
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu_switch">
+    <header class="main_header">  
+        <div class="logo">
+            <a href="index.html"><img src="theoneoff-material\top\LOGO.png" alt=""></a>
+        </div>
+        <label for="menu_switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <nav class="main_nav" >
+            <a href="about.html" >ABOUT</a>
+            <a href="introduce.html">INTRODUCE</a>
+            <a href="case.html">CASES</a>
+            <a href="outfit.html">OUTFIT</a>
+            <a href="reserve.html">RESERVE</a>
+        </nav> 
+    </header>
+    <section class="banner">
+        <div class="banner_pic">
+            <div class="banner_pic_src">
+                <img src="theoneoff-material\case\f1.png" alt="">
+            </div>
+        </div>
+        <div class="banner_text">
+            <h2>Tired of always wearing black?</h2>
+            <p>Tired of always wearing black? 5 keys to refreshing summer "bright color" outfits, you will be a sunny man after learning it!This summer, buy a few bright-colored clothes for your wardrobe. Just match the black pants and gray pants you already have.</p>
+        </div>
+    </section>
+    <section class="canvas">
+        <p class="brush_caption">Case</p>
+        <p class="case_title">DREADLOCKS</p>
+        <div class="case_page">
+            <div class="case_card">
+                <a href="case-detail.html">
+                    <div class="case_img">
+                        <img src="theoneoff-material\introduce\design1.png" alt="">
+                    </div>
+                    <div class="case_text">
+                        <p>Pink Panther</p>
+                    </div>
+                </a>
+            </div>
+            <div class="case_card">
+                <a href="case-detail.html">
+                    <div class="case_img">
+                        <img src="theoneoff-material\introduce\design3.png" alt="">
+                    </div>
+                    <div class="case_text">
+                        <p>Fire Flame </p>
+                    </div>
+                </a>
+            </div>
+            <div class="case_card">
+                <a href="case-detail.html">
+                    <div class="case_img">
+                        <img src="theoneoff-material\introduce\design6.png" alt="">
+                    </div>
+                    <div class="case_text">
+                        <p>Dark Style</p>
+                    </div>
+                </a>
+            </div>
+            <div class="case_card">
+                <a href="case-detail.html">
+                    <div class="case_img">
+                        <img src="theoneoff-material\introduce\design7.png" alt="">
+                    </div>
+                    <div class="case_text">
+                        <p>Mixed Power</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <p class="case_title">JAPAN STYLE</p>
+        <div class="case_page">
+            <div class="case_card">
+                <a href="case-detail.html">
+                    <div class="case_img">
+                        <img src="theoneoff-material\introduce\japan1.png" alt="">
+                    </div>
+                    <div class="case_text">
+                        <p>Wet Style</p>
+                    </div>
+                </a>
+            </div>
+            <div class="case_card">
+                <a href="case-detail.html">
+                    <div class="case_img">
+                        <img src="theoneoff-material\introduce\japan4.png" alt="">
+                    </div>
+                    <div class="case_text">
+                        <p>Easy Man</p>
+                    </div>
+                </a>
+            </div>
+            <div class="case_card">
+                <a href="case-detail.html">
+                    <div class="case_img">
+                        <img src="theoneoff-material\introduce\japan3.png" alt="">
+                    </div>
+                    <div class="case_text">
+                        <p>Buzz Cut</p>
+                    </div>
+                </a>
+            </div>
+            <div class="case_card">
+                <a href="case-detail.html">
+                    <div class="case_img">
+                        <img src="theoneoff-material\introduce\japan2.png" alt="">
+                    </div>
+                    <div class="case_text">
+                        <p>Gentleman</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <p class="case_title">SPECIAL STYLE</p>
+        <div class="case_page">
+            <div class="case_card">
+                <a href="case-detail.html">
+                    <div class="case_img">
+                        <img src="theoneoff-material\introduce\design11.png" alt="">
+                    </div>
+                    <div class="case_text">
+                        <p>Hanamichi</p>
+                    </div>
+                </a>
+            </div>
+            <div class="case_card">
+                <a href="case-detail.html">
+                    <div class="case_img">
+                        <img src="theoneoff-material\introduce\design13.png" alt="">
+                    </div>
+                    <div class="case_text">
+                        <p>Crazy Gun</p>
+                    </div>
+                </a>
+            </div>
+            <div class="case_card">
+                <a href="case-detail.html">
+                    <div class="case_img">
+                        <img src="theoneoff-material\introduce\design14.png" alt="">
+                    </div>
+                    <div class="case_text">
+                        <p>Purple Time</p>
+                    </div>
+                </a>
+            </div>
+            <div class="case_card">
+                <a href="case-detail.html">
+                    <div class="case_img">
+                        <img src="theoneoff-material\introduce\design15.png" alt="">
+                    </div>
+                    <div class="case_text">
+                        <p>Wild Style</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+
+
+        <!-- <script>
+            function dread_click(){
+                document.getElementsByClassName("case_page").style.display = "block";
+                document.getElementsByClassName("case_page2").style.display = "none";
+            }
+            function init(){
+              document.getElementById("dreadlocks").onclick = dread_click; 
+            }
+            
+            window.addEventListener("load", init, false);
+        </script> -->
+
+
+
+            
+    </section>
+    <section class="cloth">
+            <section class="footer">
+                <div class="footer_card">
+                    <p class="footer_logo">JEDFFERY</p>
+                    <p class="footer_content">The latest fashion news, beauty coverage, celebrity style, fashion week updates, culture reviews, and videos on Vogue.com.</p>
+                </div>
+                <div class="footer_font">
+                    <div class="footer_icon">
+                        <a href="case-detail.html"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-pinterest-p fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-discord fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="footer_right">2023&copy;jeffery old school.© 2023 Condé Nast. All rights reserved. Use of this site constitutes acceptance of our User Agreement and Privacy Policy and Cookie Statement and Your California Privacy Rights. jeffery may earn a portion of sales from products that are purchased through our site as part of our Affiliate Partnerships with retailers. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast.</div> 
+            </section>
+
+    </section>
+    
+</body>
+</html>

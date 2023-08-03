@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>JEFFERY OLD SCHOOL</title>
+    <style>
+        *{
+            /* outline: 1px solid blue; */
+        }
+        .banner{
+            margin: 70px 0 ;
+        }
+        .brush_caption{
+            font-size: 30px;
+            padding: 5%;
+            font-weight: bolder;
+            text-align: center;
+            color: transparent;
+            background-image: linear-gradient(to right, black, gray,    white);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: text-expand 5s ease-in-out infinite;
+        } /*  標題動畫 */
+        @keyframes text-expand {
+            0% {
+                background-size: 0% 100%;
+            }
+            50% {
+                background-size: 100% 100%;
+            }
+            100% {
+                background-size: 0% 100%;
+            }
+        }
+        .banner_pic{
+            overflow: hidden;
+        }
+        .banner_pic img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .item{
+            overflow: hidden;
+            padding: 20px 10px 0;
+        }
+        .item img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .banner span{
+            font-size: 12px;
+        }
+        .banner p{
+            font-size: 12px;
+            text-align: center;
+            padding: 10px;
+        }
+        .i2{
+            text-align: center;
+            font-size: 20px;
+            padding: 40px 0 5px;
+        }
+        @media screen and (min-width: 768px ){
+            .banner{
+                width: 100%;
+                margin: 90px 0 ;
+                display: grid;
+                grid-auto-columns: 1fr;
+                grid-auto-rows: 1fr;
+                gap: 1rem;
+            }
+            .banner p{
+                display: none;
+            }
+            .brush_caption{
+                font-size: 60px;
+                align-self: center;
+                justify-self: center;
+            }
+            .i1{
+                grid-row: 1/2;
+                grid-column: 1/3;
+            }
+            .i2{
+                grid-row: 2/3;
+                grid-column: 1/3;
+                align-self: flex-end;
+                justify-self: center;
+            }
+            .i3{
+                grid-row: 1/4;
+                grid-column: 3/5;
+            }
+            .i4{
+                grid-row: 3/4;
+                grid-column: 1/2;
+            }
+            .i5{
+                grid-row: 3/4;
+                grid-column: 2/3;
+            }
+            .i6{
+                grid-row: 4/5;
+                grid-column: 1/2;
+            }
+            .i7{
+                grid-row: 4/5;
+                grid-column: 2/3;
+            }
+            .banner span{
+                grid-row: 4/5;
+                grid-column: 3/5;
+                font-size: 20px;
+                align-self: center;
+                justify-self: center;         
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .brush_caption{
+                font-size: 70px;
+            }
+            .banner span{
+                font-size: 26px;
+            }
+        }
+        .information{
+            padding: 30px 0;
+        }
+        .info_pic{
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 200px;
+            overflow: auto;
+            margin: 20px 0;
+            box-sizing: border-box;
+        }
+        .info_pic img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .info_card{
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 200px;
+            overflow: auto;
+            padding: 20px;
+            margin: 20px 0;
+            box-sizing: border-box;
+        }
+        .info_card p:first-child{
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        .info_card p{
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        @media screen and (min-width: 768px ){
+            .information{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding: 100px 0;
+            }
+            .info_pic{
+                width: 40%;
+            }
+            .info_card{
+                width: 40%;
+            }
+            .info_card p{
+                font-size: 20px;
+            }
+            .info_card p{
+                font-size: 20px;
+            }
+        }
+        
+        .canvas_grey{
+            background-color: #eee;
+            padding: 20px 0;
+        }
+        .subscribe{
+            width: 85vw;
+            margin: auto;
+        }
+        .subscribe_content p{
+            padding: 20px 10px;
+            box-sizing: border-box;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .subscribe_input{
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .subscribe_input input[type=text]{
+            font-size: 12px;
+            margin: 20px auto;
+            display: block;
+            border: none;
+            padding: 10px 20px;
+            background-color: transparent;
+        }
+        .subscribe_input input[type=submit]{
+            display: block;
+            background-color: #ccc;
+            font-size: 12px;
+            margin: 5px auto 20px;
+            padding: 10px 40px;
+            border: none;
+            border-radius: 10px;
+        }
+        @media screen and (min-width: 768px ){
+            .canvas_grey{
+                padding: 50px 0;
+            }
+            .subscribe{
+                display: flex;
+                align-items: center;
+            }
+            .subscribe_content{
+                width: 60%;
+            }
+            .subscribe_content p{
+                font-size: 20px;
+            }
+            .subscribe_input{
+                border: none;
+            }
+            .subscribe_input input[type=text]{
+                display: inline-block;
+                /* margin: 0; */
+                padding: 10px;
+                font-size: 20px;
+            }
+            .subscribe_input input[type=submit]{
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 20px;
+                border-radius: 20px;
+
+            }
+        }
+        
+        .adress{
+            margin: 40px 0;
+        }
+        .adress th, .adress td{
+            font-size: 12px;
+            padding: 5px;
+        }
+        @media screen and (min-width: 768px ){
+            .adress{
+                margin: 60px 0;
+            }
+            .table{
+                margin: auto;
+            }
+            .adress th, .adress td{
+                padding: 10px;
+                font-size: 20px;
+            }
+        }
+        @media screen and (min-width: 1200px ){} 
+
+
+
+        
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu_switch">
+    <header class="main_header">  
+        <div class="logo">
+            <a href="index.html"><img src="theoneoff-material\top\LOGO.png" alt=""></a>
+        </div>
+        <label for="menu_switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <nav class="main_nav" >
+            <a href="about.html" >ABOUT</a>
+            <a href="introduce.html">INTRODUCE</a>
+            <a href="case.html">CASES</a>
+            <a href="outfit.html">OUTFIT</a>
+            <a href="reserve.html">RESERVE</a>
+        </nav> 
+    </header>
+        <section class="canvas">
+            <section class="banner">
+                <div class="brush_caption i1">About</div>
+                <div class="banner_pic i3"><img src="theoneoff-material\top\d2.png" alt=""></div>
+                <span>We are a group of passionate individuals</span>
+                <div class="i2">LOCATION<br>4 +<sup>(office)</sup></div>
+                <div class="item i4"><img src="theoneoff-material\about_us\b1.png" alt=""></div>
+                <p>JAPAN</p>
+                <div class="item i5"><img src="theoneoff-material\about_us\b2.png" alt=""></div>
+                <p>NEW YORK</p>
+                <div class="item i6"><img src="theoneoff-material\about_us\b3.png" alt=""></div>
+                <p>LOS ANGELES</p>
+                <div class="item i7"><img src="theoneoff-material\about_us\b4.png" alt=""></div>
+                <p>TAIWAN</p>
+            </section> 
+            <section class="separate_block" >
+                <div class="separate_block_title">EXPERIENCE</div>
+            </section>   
+            <section class="information">
+                <div class="info_pic">
+                    <img src="theoneoff-material\introduce\youtube1-2.png" alt="">
+                </div>
+                <div class="info_card">
+                    <p>
+                        Frenchic® founder and personal image consultant.</p><br><br><br><p> Megan, specializes in helping individuals who struggle with dressing up and spending a lot of time and money but still can't find their own style.<br><br><br> She helps them discover a clothing style that aligns with their personality and allows them to feel comfortable and confident.<br><br><br> Megan's goal is to create a wardrobe that is effortless, versatile, and abundant, making everyday dressing a breeze.</p><br><br><br>
+                    
+                    <p>
+                        Through the journey towards their ideal image, Megan helps her clients overcome external anxieties and gain more self-confidence, joy, and ease.<br><br><br> Many clients who have gone through her courses and services have shared heartwarming feedback such as<br><br><br> "My husband and daughter compliment me on my looks every day," "I feel a bit more confident now," "Clothing truly affects a person's behavior, posture, and mindset.<br><br><br> Thank you for teaching me this," "I no longer worry about my appearance; I just focus wholeheartedly on doing what I truly want.<br><br><br>" These voices are what truly moves Megan.
+                    </p>
+
+                </div>
+                <div class="info_card">
+                    <p>Image consultant and hair stylist</p>
+                    <p>2023 New awards</p><br><br>
+                    <p>Frenchic® founder and personal image consultant.</p>
+                    <br><br><br><p> Megan, specializes in helping individuals who struggle with dressing up and spending a lot of time and money but still can't find their own style.</p>
+                </div>
+                <div class="info_card">
+                    <p>Design is always filled with challenges.</p><br><br>
+                    <p>She helps them discover a clothing style that aligns with their personality and allows them to feel comfortable and confident.</p>
+                    <br><br><p>She helps them discover a clothing style that aligns with their personality and allows them to feel comfortable and confident.</p>
+                </div>
+            </section>
+        </section>  
+        <section class="canvas_grey">
+            <div class="subscribe">
+                <div class="subscribe_content">
+                    <p>Join us on this enriching journey as we bring together lover, designer, and enthusiasts to celebrate the art and rich life.</p>
+                </div>
+                <div class="subscribe_input">
+                    <form>
+                        <input type="text" placeholder="Email address" name="email" required>
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </section>
+            
+            <section class="canvas">
+                <div class="adress">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Store Name</th>
+                            <th scope="col">Adress</th>
+                            <th scope="col">Telephone</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Taoyuan Store</td>
+                            <td>3rd Floor, No. 105, Minsheng Road, Taoyuan City</td>
+                            <td>03-3333369</td>
+                          </tr>
+                          <tr>
+                            <td>Taipei Store</td>
+                            <td>No. 26, Dali Street, Wanhua District, Taipei City</td>
+                            <td>02-23380060</td>
+                          </tr>
+                          <tr>
+                            <td>Tainan Chengda Store</td>
+                            <td>2F, No. 9, Yule Street, East District, Tainan City</td>
+                            <td>06-2097569</td>
+                          </tr>
+                          <tr>
+                            <td>Taichung Fengjia Store</td>
+                            <td>No. 9, Lane 172, Xi'an Street, Xitun District, Taichung City </td>
+                            <td>04-24520467</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                </div>
+            </section> 
+        
+     
+        <section class="cloth">
+            <section class="footer">
+                <div class="footer_card">
+                    <p class="footer_logo">JEDFFERY</p>
+                    <p class="footer_content">The latest fashion news, beauty coverage, celebrity style, fashion week updates, culture reviews, and videos on Vogue.com.</p>
+                </div>
+                <div class="footer_font">
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-pinterest-p fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-discord fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="footer_right">2023&copy;jeffery old school.© 2023 Condé Nast. All rights reserved. Use of this site constitutes acceptance of our User Agreement and Privacy Policy and Cookie Statement and Your California Privacy Rights. jeffery may earn a portion of sales from products that are purchased through our site as part of our Affiliate Partnerships with retailers. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast.</div> 
+            </section>
+
+        </section>
+    
+    
+
+</body>
+</html>
